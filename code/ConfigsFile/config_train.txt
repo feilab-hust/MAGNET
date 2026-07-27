@@ -1,0 +1,19 @@
+expname =  your_example_name
+action = TRAIN_DDP
+find_unused_parameters=True
+task_idx= -1
+task_list= 0,1,2,3,4,5,6,7,8
+MT_data_config = code/multi_data_info_XR.yaml
+sample_interval=4
+lr=2e-5
+n_epochs=50
+n_steps=100
+cuda
+DDP_backend = gloo
+port = 29500
+gid = 0
+gpu_para_list = 0
+world_size = 1
+num_workers= 4
+refine_loss={'mse_loss': 1.0,'mae_loss': 1.0}
+save_num=5

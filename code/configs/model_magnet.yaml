@@ -1,0 +1,6 @@
+model:
+  family: magnet
+  name: MultiModel_X_light
+  loss: l1
+  prompt_enable: True
+  query_chunk: 2097152

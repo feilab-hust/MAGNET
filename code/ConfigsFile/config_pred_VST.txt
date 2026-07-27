@@ -1,0 +1,17 @@
+action = EVAL
+VST
+MT_model_name = MultiModel_X_light_3c
+loading_MT_ckpt_path=pretrain/magnet_vst.tar
+sr = 1
+block_size = [1,96,96]
+overlap = [0,16,16]
+inp_path = example/2d_input/vitual_stain/input.tif
+prompt_path = prompt/2d/virtual_stain/prompt
+save_path = pred/2d/vitual_stain
+cuda
+DDP_backend = gloo #use nccl when on Linux
+port = 29500
+gid = 0
+gpu_para_list = 0
+world_size  = 1
+num_workers = 4

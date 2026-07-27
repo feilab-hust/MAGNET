@@ -1,0 +1,149 @@
+Task_labels: ['Denoise_2D','SR_2D', 'Iso','Deblur_2D','DeAberration','StyleTransfer', 'Debackground',
+              'Denoise_3D','Descatter_3D']
+
+prompt_enable: True
+prompt_valid_idx: 0
+
+data_norm:
+  inp: {sub: [0.5], div: [0.5]}
+  gt: {sub: [0.5], div: [0.5]}
+
+data_info:
+  Denoise_2D:
+      'data_path': ./example/datamini/Denoise_2D/FMD_shuffle
+      'data_loading_mode': 'multi'   # single: one folder (contains: input,target,..) ; Multi: root path (contains multi folders); Pick: randomly pick one folder in multi folders
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 128 ** 2        #sample points for Targets
+      'sr_ratio': [ 1, 1 ]
+      'Dims': 2
+      'sr_ration_val': 1
+      'pre_scale': True          #{True, when input Size == Target Size}, {False, up-sampling before random crop}
+      'pre_normalize': False
+      'val_num': 100
+
+  SR_2D:
+      'data_path': ./example/datamini/SR_2D/BioSR_NM_benchmark
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 64
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 64 ** 2
+      'sr_ratio': [ 1, 4 ]
+      'Dims': 2
+      'sr_ration_val': 2
+      'pre_scale': False
+      'pre_normalize': False
+      'val_num': 100
+
+  Iso:
+      'data_path': ./example/datamini/Isotropic_2D/CARE
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 128 ** 2
+      'sr_ratio': [ 1, 1 ]
+      'Dims': 2
+      'sr_ration_val': 1
+      'pre_scale': True
+      'pre_normalize': False
+      'val_num': 100
+
+  Deblur_2D:
+      'data_path': ./example/datamini/Deblur_2D/DeepBacs
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 128 ** 2
+      'sr_ratio': [ 1, 1 ]
+      'Dims': 2
+      'sr_ration_val': 1
+      'pre_scale': True
+      'pre_normalize': False
+      'val_num': 100
+
+  DeAberration:
+      'data_path': ./example/datamini/DeAberration_2D/DeAbe
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 128 ** 2
+      'sr_ratio': [ 1, 1 ]
+      'Dims': 2
+      'sr_ration_val': 1
+      'pre_scale': True
+      'pre_normalize': False
+      'val_num': 100
+
+  StyleTransfer:
+      'data_path': ./example/datamini/Artifacial_label_2D/DeepBacs/DeepBacs_E.coli_membranes1
+      'data_loading_mode': 'single'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 128 ** 2
+      'sr_ratio': [ 1, 1 ]
+      'Dims': 2
+      'sr_ration_val': 1
+      'pre_scale': True
+      'pre_normalize': False
+      'val_num': 100
+
+  Debackground:
+      'data_path': ./example/datamini/Debackground/BF_SIM
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'batch_size': 1
+      'sample_q': 128 ** 2
+      'sr_ratio': [ 1, 1 ]
+      'Dims': 2
+      'sr_ration_val': 1
+      'pre_scale': True
+      'pre_normalize': False
+      'val_num': 100
+
+  Denoise_3D:
+      'data_path': ./example/datamini/Denoise_3D/3D_RCAN
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'depth': 64
+      'batch_size': 1
+      'sample_q': 12*48*48
+      'sr_ratio': [1, 1]
+      'sr_ration_val': 1
+      'val_num': 100
+      'Dims': 3
+      'repeat': 1
+      'pre_scale': True
+      'pre_normalize': False
+
+  Descatter_3D:
+      'data_path': ./example/datamini/Descattering/X_64
+      'data_loading_mode': 'multi'
+      'discard_train_folder':
+      'patch_size': 128
+      'patch_size_X': None
+      'depth': 64
+      'batch_size': 1
+      'sample_q': 12*48*48
+      'sr_ratio': [ 1, 1 ]
+      'sr_ration_val': 1
+      'val_num': 100
+      'Dims': 3
+      'repeat': 1
+      'pre_scale': True
+      'pre_normalize': False

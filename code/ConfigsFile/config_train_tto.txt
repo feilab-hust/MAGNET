@@ -1,0 +1,32 @@
+expname = your_example_name_tto
+action = SSL
+loading_MT_ckpt_path = ./pretrain/magnet_ckpt.tar
+output_size = 192
+
+task_idx = -1
+task_list = 1
+MT_data_config = code/SSL.yaml
+
+psf_dir = code/psf/psf.tif
+deconv = f
+lr = 1e-4
+n_epochs = 6
+n_steps = 100
+gamma = 0.5
+sample_interval = 1
+test_num = 10
+save_num = 10
+refine_loss = {'mse_loss': 1.0, 'mae_loss': 1.0}
+
+tto_bl_weight = 1.8
+tto_cg_weight = 0.8
+tto_eval_initial = false
+
+cuda
+gid = 0
+gpu_para_list = 1
+world_size = 1
+num_workers = 2
+DDP_backend = gloo
+port = 32020
+seed = 42

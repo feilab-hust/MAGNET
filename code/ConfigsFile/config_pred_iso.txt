@@ -1,0 +1,16 @@
+action = EVAL
+iso_3d
+loading_MT_ckpt_path=pretrain/magnet_ckpt.tar
+sr = 1
+block_size = [128,128,128]
+overlap = [0,16,16]
+inp_path = example/3d_input/isotropic/input.tif
+prompt_path = prompt/3d/isotropic/prompt
+save_path = pred/3d/isotropic
+cuda
+DDP_backend = gloo #use nccl when on Linux
+port = 29500
+gid = 0
+gpu_para_list = 0
+world_size  = 1
+num_workers = 4

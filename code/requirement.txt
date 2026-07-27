@@ -1,0 +1,34 @@
+# Install PyTorch and its matching torchvision build first, according to the
+# server CUDA version. They are intentionally not pinned here because a pip
+# wheel must match that CUDA/PyTorch combination.
+
+# Unified framework and dataloader
+numpy>=1.26,<2.3
+scipy>=1.11,<2
+PyYAML>=6,<7
+ConfigArgParse>=1.7,<2
+omegaconf>=2.3,<3
+tifffile>=2024.8
+imageio>=2.34,<3
+h5py>=3.10,<4
+easydict>=1.13,<2
+tqdm>=4.66,<5
+Pillow>=10,<13
+
+# MAGNET and UNiFMIR
+timm>=1.0,<2
+einops>=0.7,<1
+unfoldNd>=0.2,<1
+torchinfo>=1.8,<2
+
+# Evaluation and visualization used by the shared entry points
+scikit-image>=0.22,<1
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+
+# FluoResFM text encoder (BiomedCLIP / CLIP)
+open_clip_torch>=2.30,<3
+transformers>=4.41,<5
+huggingface-hub>=0.23,<1
+ftfy>=6.2,<7
+safetensors>=0.4,<1

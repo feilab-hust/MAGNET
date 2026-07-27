@@ -1,0 +1,25 @@
+Task_labels: ['SSL']
+
+#all datapath -> patch
+prompt_enable: False
+prompt_valid_idx: 0
+
+data_norm:
+  inp: {sub: [0.5], div: [0.5]}
+  gt: {sub: [0.5], div: [0.5]}
+
+data_info:
+  SSL:
+      'data_path': ./example/SSL
+      'target': True
+      'data_loading_mode': 'single'
+      'discard_train_folder':
+      'patch_size': None
+      'batch_size': 8
+      'sample_q': 128 ** 2
+      'sr_ratio': [ 1.5, 1.5 ]
+      'Dims': 2
+      'sr_ration_val': 1.5
+      'pre_scale': False
+      'pre_normalize': True
+
