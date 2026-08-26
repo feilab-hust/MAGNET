@@ -7,36 +7,20 @@
 ## system requirement
 ✅ Windows Server 2022 Datacenter  
 ✅ Graphics: Nvidia GPU (RTX 4090 recommended)
-✅ Python 3.10 (64 bit)  
+✅ Python 3.12 (64 bit)  
 
 ## Get start 
 📦First, you need to create a conda envirenment
 ```
-conda create -n MAGNET python=3.10
+conda create -n MAGNET python=3.12
 ```
-📦Second, we recommend to install Pytorch 2.0.1 with CUDA 11.8 by this command:
+📦Second, we recommend to install Pytorch 2.7.1 with CUDA 12.6 by this command:
 ```
-conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu126
 ```
 📦Tired, set the root dir into MAGNET-main/code and install the packages for environment required
 ```
 pip install -r requirements.txt
-```
-📦Or you can download these packages manually.
-```
-numpy==1.26.4
-pandas
-configargparse
-tqdm
-timm
-unfoldNd
-scipy
-einops
-scikit-image
-easydict
-omegaconf
-matplotlib
-seaborn
 ```
 
 ## Usage
