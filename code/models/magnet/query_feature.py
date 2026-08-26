@@ -52,8 +52,12 @@ def gen_postSR_2D_pair(base_lr_size,img_lr,img_gt,s_factor, train_mode=True):
         # the prompt target would produce floor(256 / 1.8)=142, which later
         # becomes 36 after Restormer downsampling and breaks window attention.
         # The block size is the real LR size used by the current inference.
-        h_lr = base_lr_size
-        w_lr = base_lr_size
+        if base_lr_size is None:
+            h_lr = math.floor(img_gt.shape[-2] / s_factor + 1e-9)
+            w_lr = math.floor(img_gt.shape[-1] / s_factor + 1e-9)
+        else:
+            h_lr = base_lr_size
+            w_lr = base_lr_size
 
         # crop
         crop_lr = img_lr[:, :round(h_lr * s_factor), :round(w_lr * s_factor)]
