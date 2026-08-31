@@ -126,4 +126,7 @@ You can run prompt Predictor training process by this command:
 ```
 python code/main.py --config code/configsfile/config_train_pdor.txt
 ```
+
+### metrics
+see code/calculate
 🤝Any discussion, feedback, or collaboration is highly welcome!
