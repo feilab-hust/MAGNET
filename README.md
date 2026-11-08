@@ -5,7 +5,7 @@
 
 
 ## system requirement
-✅ Windows 10/11
+✅ Windows 10/11  
 ✅ Graphics: Nvidia GPU (RTX 4090 recommended) 
 
 ## Get start 
