@@ -130,6 +130,9 @@ python code/main.py --config code/configsfile/config_train_pdor.txt
 see code/calculate
 
 
+### Visualization & GUI
+An independent visualization and graphical user interface (GUI) project is available [here](https://github.com/feilab-hust/Magnet-GUI), providing an intuitive way to explore and interact with the proposed method.
+
 ### Supplementary Data
 TTO raw data [here](https://drive.google.com/file/d/15PinnSWYnIKSU_ZKJD9D4usR222x2x7u/view?usp=drive_link), 
 Two channels of Microtubules and lysosome [here](https://drive.google.com/file/d/1l3Is3dSthj33TnxzqrzWK0xD23PN_IXe/view?usp=drive_link), 
