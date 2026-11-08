@@ -5,9 +5,8 @@
 
 
 ## system requirement
-✅ Windows Server 2022 Datacenter  
-✅ Graphics: Nvidia GPU (RTX 4090 recommended)
-✅ Python 3.12 (64 bit)  
+✅ Windows 10/11
+✅ Graphics: Nvidia GPU (RTX 4090 recommended) 
 
 ## Get start 
 📦First, you need to create a conda envirenment
