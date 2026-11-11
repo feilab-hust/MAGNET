@@ -1,5 +1,5 @@
 # MAGNET
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24126581.svg)](https://doi.org/10.5281/zenodo.24126581)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24126581.svg)](https://doi.org/10.5281/zenodo.24126581)  
  A awesome 2D/3D-compatible multitasks foundation model for fluorescence image restoration proposed in our [paper](https://www.biorxiv.org/content/10.64898/2025.12.23.696141v1)🚀
 <img src="./src/1.png" width="900">
 
